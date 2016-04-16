@@ -7,14 +7,19 @@ var show = false;
 function showValue(newValue)
 {
 	document.getElementById("range").value=newValue;
+  changeStarColor(newValue);
 };
 
 function updateValue(val) {
   if(event.keyCode == 13) {
     if (val >= -100 && val <= 100) {
         show = false;
+        star = document.getElementById("star");
+
         showError(show);
         document.getElementById("scrollbar").value=val;
+
+        changeStarColor(val);
     } else {
       show = true;
       showError(show);
@@ -23,25 +28,18 @@ function updateValue(val) {
 
 };
 
+function changeStarColor(val) {
+  if(val == 0) {
+    star.style.backgroundColor = "none";
+  } else if (val > 0) {
+    star.style.backgroundColor = 'rgba(0,0,'+val+',0.8)';
+  } else {
+    val = val * -1;
+    star.style.backgroundColor = 'rgba('+val+',0,0,0.8)';
+  }
+}
+
 function showError(show) {
   document.getElementById("message").style.visibility = show ? "visible" : "hidden";
   document.getElementById("message").innerHTML = "Number must be between -100 and 100!"
 }
-
-function fade_out() {
-  $("#message").fadeOut();
-}
-
-function changeColor(val,color){
-  var m = document.getElementById("mydiv");
-    switch (color) {
-        case 0: red = val; break;
-        case 1: green = val; break;
-        case 2: blue = val; break;
-        case 3: alpha = val; break;
-    }
-
-    m.style.backgroundColor='rgba('+red+','+green+','+blue+','+alpha+')';
-    m.style.height=val;
-    m.style.width=val * 2;
-};

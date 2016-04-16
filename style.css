@@ -5,7 +5,9 @@
 
 .title {
   color: white;
-  font-family: inherit;;;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 75px;
 }
 
 .star {

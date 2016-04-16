@@ -21,14 +21,14 @@
 
 .star {
   height: 300px;
-  margin-left: auto;
+  /*margin-left: auto;
   margin-right: auto;
-  display: block;
+  display: block;*/
   background-color: 0px 0px 100px #fff;
   border-radius: 150px;
+  left: 39%;
+  margin-top: 20px;
   position: relative;
-  clear: both;
-
 }
 
 .earth {
@@ -40,7 +40,7 @@
 
 .velocity-box {
   position: fixed;
-  bottom: 7%;
+  bottom: 15%;
   left: 32%;
 
 }
@@ -53,4 +53,5 @@
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
+  text-align: center;
 }

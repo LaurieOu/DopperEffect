@@ -20,16 +20,16 @@ function updateValue(val) {
       showError(show);
     }
   }
-
 };
 
 function changeStarColor(val) {
   if(val == 0) {
     star.style.backgroundColor = 'rgba(0,0,0,0)';
   } else if (val > 0) {
+    val = val * 2;
     star.style.backgroundColor = 'rgba(0,0,'+val+',0.8)';
   } else {
-    val = val * -1;
+    val = val * -2;
     star.style.backgroundColor = 'rgba('+val+',0,0,0.8)';
   }
 }

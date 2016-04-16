@@ -1,7 +1,3 @@
-var red=0;
-var green=0;
-var blue=0;
-var alpha=0;
 var show = false;
 
 function showValue(newValue)
@@ -15,10 +11,9 @@ function updateValue(val) {
     if (val >= -100 && val <= 100) {
         show = false;
         star = document.getElementById("star");
-
-        showError(show);
         document.getElementById("scrollbar").value=val;
 
+        showError(show);
         changeStarColor(val);
     } else {
       show = true;
@@ -30,7 +25,7 @@ function updateValue(val) {
 
 function changeStarColor(val) {
   if(val == 0) {
-    star.style.backgroundColor = "none";
+    star.style.backgroundColor = 'rgba(0,0,0,0)';
   } else if (val > 0) {
     star.style.backgroundColor = 'rgba(0,0,'+val+',0.8)';
   } else {

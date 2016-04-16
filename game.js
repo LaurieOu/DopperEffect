@@ -43,7 +43,7 @@ function changeStarColor(val) {
     star.style.width = val * -1 + 300;
     star.style.height = val * -1 + 300;
     star.style.backgroundColor = 'rgba('+val+',0,0,0.3)';
-    star.style.left = val * -1.7;
+    star.style.left = val * -2;
     star.style.bottom = val * -0.8;
     // star.style.bottom = 0;
   }

@@ -11,6 +11,14 @@
   margin: 0px;
 }
 
+.text {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  display: inline;
+  padding: 20px;
+}
+
 .star {
   height: 300px;
   margin-left: auto;
@@ -19,6 +27,7 @@
   background-color: 0px 0px 100px #fff;
   border-radius: 150px;
   position: relative;
+  clear: both;
 
 }
 
@@ -27,4 +36,21 @@
   height: 150px;
   padding-right: 70px;
   float: right;
+}
+
+.velocity-box {
+  position: fixed;
+  bottom: 7%;
+  left: 32%;
+
+}
+
+#scrollbar {
+  margin-left: 20px;
+}
+
+#message {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
 }

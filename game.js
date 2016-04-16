@@ -2,6 +2,7 @@ var red=0;
 var green=0;
 var blue=0;
 var alpha=0;
+var show = false;
 
 function showValue(newValue)
 {
@@ -9,24 +10,26 @@ function showValue(newValue)
 };
 
 function updateValue(val) {
-  if (val >= -100 && val <= 100) {
-    if(event.keyCode == 13) {
-      document.getElementById("scrollbar").value=val;
-    }
-  } else {
-    try {
-      throw "Number must be between -100 and 100!"
-    }
-    catch(err) {
-      message.innerHTML = err;
-      setTimeout(fade_out, 500);
+  if(event.keyCode == 13) {
+    if (val >= -100 && val <= 100) {
+        show = false;
+        showError(show);
+        document.getElementById("scrollbar").value=val;
+    } else {
+      show = true;
+      showError(show);
     }
   }
 
 };
 
+function showError(show) {
+  document.getElementById("message").style.visibility = show ? "visible" : "hidden";
+  document.getElementById("message").innerHTML = "Number must be between -100 and 100!"
+}
+
 function fade_out() {
-  $("#message").fadeOut().empty();
+  $("#message").fadeOut();
 }
 
 function changeColor(val,color){

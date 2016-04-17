@@ -31,7 +31,7 @@ function changeStar(val) {
     star.style.bottom = 0;
   } else if (val > 0) {
     val = Math.pow(2.71828, val * 0.05);
-    star.style.background = 'rgba('+Math.round(val) * 2+',0,0,0.3)';
+    star.style.background = 'rgba('+Math.round(val) * 2+',0,0,0.7)';
     star.style.width = val * -1 + 300;
     star.style.height = val * -1 + 300;
     star.style.left = 39 - val * 0.2 + '%';
@@ -39,11 +39,12 @@ function changeStar(val) {
 
   } else {
     val = Math.pow(2.71828, val * -0.05);
-    star.style.background= 'rgba(0,0,'+Math.round(val) * 2+',0.3)';
+    star.style.background= 'rgba(0,0,'+Math.round(val) * 2+',0.7)';
     star.style.width = val + 300;
     star.style.height = val + 300;
     star.style.left = val * 0.1 + 39 + '%';
     star.style.bottom = val * 0.8;
+
   }
 }
 

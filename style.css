@@ -26,13 +26,13 @@
   left: 39%;
   margin-top: 20px;
   position: relative;
-  animation-name: blink;
-  animation-duration: 2s;
+  animation-name: blink 1.7s steps(5, start) infinite;
+  -webkit-animation: blink 1.7s steps(5, start) infinite;
+
 }
 
 @keyframes blink {
-  0%
-  100% {background-color: none;}
+  to {background-color: rgba(0, 0, 0, 0);}
 }
 
 .earth {

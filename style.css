@@ -1,11 +1,12 @@
 .background {
-  background-image: url("http://doughathaway.com/wp-content/uploads/2014/02/shutterstock_106755722.jpg");
-  width: 100%;
+  background-image: url("https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-36.jpg");
+  background-size: cover;
 }
 
 .title {
-  color: white;
-  font-family: 'Open Sans', sans-serif;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 50px;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   font-size: 70px;
   margin: 0px;
@@ -21,14 +22,12 @@
 
 .star {
   height: 300px;
-  /*margin-left: auto;
-  margin-right: auto;
-  display: block;*/
-  background-color: 0px 0px 100px #fff;
   border-radius: 250px;
   left: 39%;
   margin-top: 20px;
   position: relative;
+
+
 }
 
 .earth {

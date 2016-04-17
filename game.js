@@ -24,24 +24,24 @@ function updateValue(val) {
 
 function changeStar(val) {
   if(val == 0) {
-    star.style.backgroundColor = 'rgba(0,0,0,0)';
+    star.style.background = 'rgba(0,0,0,0)';
     star.style.width = 300;
     star.style.height = 300;
     star.style.left = 39 + '%';
     star.style.bottom = 0;
   } else if (val > 0) {
-    val = val * 1.5;
-    star.style.backgroundColor = 'rgba(0,0,'+val+',0.5)';
+    val = Math.pow(2.71828, val * 0.05);
+    star.style.background= 'rgba(0,0,'+Math.round(val) * 2+',0.3)';
     star.style.width = val + 300;
     star.style.height = val + 300;
     star.style.left = val * 0.1 + 39 + '%';
     star.style.bottom = val * 0.8;
   } else {
-    val = val * -1.5;
-    star.style.backgroundColor = 'rgba('+val+',0,0,0.5)';
+    val = Math.pow(2.71828, val * -0.05);
+    star.style.background = 'rgba('+Math.round(val) * 2+',0,0,0.3)';
     star.style.width = val * -1 + 300;
     star.style.height = val * -1 + 300;
-    star.style.left = 39 - val * 0.1 + '%';
+    star.style.left = 39 - val * 0.2 + '%';
     star.style.bottom = val * -0.8;
   }
 }
